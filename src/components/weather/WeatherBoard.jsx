@@ -8,7 +8,6 @@ import { WeatherContext } from "../../context";
 
 const WeatherBoard = () => {
   const { weatherData, isLoading, error } = useContext(WeatherContext);
-  console.log(weatherData, isLoading, error);
 
   return (
     <div className="container">
@@ -18,9 +17,7 @@ const WeatherBoard = () => {
             <p>{isLoading.message}</p>
           ) : (
             <>
-              <div className="md:col-span-2">
-                <AddToFavourite />
-              </div>
+              <AddToFavourite />
               <WeatherHeadline />
               <WeatherCondition />
             </>

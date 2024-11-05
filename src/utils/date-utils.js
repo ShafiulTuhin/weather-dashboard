@@ -1,4 +1,4 @@
-export function getFormattedDate(value, type, inMs) {
+function getFormattedDate(value, type, inMs) {
   if (!type) return value;
 
   if (!inMs) {
@@ -25,3 +25,5 @@ export function getFormattedDate(value, type, inMs) {
 
   return new Intl.DateTimeFormat("en-us", options).format(date);
 }
+
+export { getFormattedDate };
